@@ -15,7 +15,7 @@ int main()
     scanf("%f", &floatVar);
 
     printf("Enter a double number: ");
-    scanf("%f", &doubleVar);
+    scanf("%lf", &doubleVar);
 
     printf("Enter a character: ");
     scanf(" %c", &charVar);
