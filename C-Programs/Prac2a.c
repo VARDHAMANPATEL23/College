@@ -21,12 +21,12 @@ int main()
         printf("%.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
         break;
     case '*':
-        printf("%.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
+        printf("%.4lf * %.4lf = %.6lf\n", num1, num2, num1 * num2);
         break;
     case '/':
         if (num2 != 0)
         {
-            printf("%.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
+            printf("%.4lf / %.4lf = %.6lf\n", num1, num2, num1 / num2);
         }
         else
         {
