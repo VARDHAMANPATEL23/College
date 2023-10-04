@@ -1,3 +1,4 @@
+// PRAC9A.c
 #include <stdio.h>
 
 // Define the structure

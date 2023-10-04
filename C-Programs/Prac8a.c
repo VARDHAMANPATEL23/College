@@ -1,3 +1,4 @@
+// PRAC8A.c
 #include <stdio.h>
 
 int sumOfFirstNNumbers(int n)

@@ -1,3 +1,4 @@
+// PRAC6B.c
 #include <stdio.h>
 
 int main()

@@ -1,3 +1,4 @@
+// PRAC8B.c
 #include <stdio.h>
 
 int factorial(int n)

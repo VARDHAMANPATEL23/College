@@ -1,4 +1,4 @@
-/* This code is for 1st Practical Part-A */
+// PRAC1A.c
 #include <stdio.h> //If You used int main remember to use return 0; or else ignore.
 void main()
 {

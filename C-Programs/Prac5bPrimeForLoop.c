@@ -1,4 +1,4 @@
-// This code is for checking if user input number is Prime or not in for loop
+// PRAC5B(FL).c
 #include <stdio.h>
 void main()
 {
