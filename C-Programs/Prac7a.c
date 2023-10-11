@@ -5,7 +5,7 @@
 int main()
 {
     char str[100];
-    int vowels = 0;
+    int vowels = 0, consonant = 0;
 
     printf("Enter a string: ");
     gets(str); // Input string using gets (Note: gets is not recommended, but used here for simplicity)
@@ -17,9 +17,14 @@ int main()
         {
             vowels++;
         }
+        else
+        {
+            consonant++;
+        }
     }
 
     printf("Number of vowels: %d\n", vowels);
+    printf("Number of consonants: %d\n", consonant);
 
     return 0;
 }
