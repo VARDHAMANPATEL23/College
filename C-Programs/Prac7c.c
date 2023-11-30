@@ -19,7 +19,7 @@ int main()
     char str[100];
 
     printf("Enter a string: ");
-    gets(str); // Input string using gets (Note: gets is not recommended, but used here for simplicity.You can use fget)
+    fgets(str, 100, stdin); // Input string using gets (Note: gets is not recommended, but used here for simplicity.You can use fget)
 
     reverseString(str);
 
