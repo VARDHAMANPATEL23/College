@@ -8,7 +8,7 @@ int main()
     int vowels = 0, consonant = 0;
 
     printf("Enter a string: ");
-    gets(str); // Input string using gets (Note: gets is not recommended, but used here for simplicity)
+    fgets(str, 100, stdin); // Input string using gets (Note: gets is not recommended, but used here for simplicity)
 
     for (int i = 0; i < strlen(str); i++)
     {
