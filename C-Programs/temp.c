@@ -61,19 +61,51 @@ void freePlaylist(struct Song* head) {
     }
 }
 
+// Menu function to allow user to choose actions
+void menu() {
+    printf("\nMusic Player Menu:\n");
+    printf("1. Insert a song at the front of the playlist\n");
+    printf("2. Display all songs\n");
+    printf("3. Exit\n");
+    printf("Choose an option: ");
+}
+
 int main() {
     struct Song* playlist = NULL; // Head of the playlist (doubly linked list)
+    int choice;
+    char title[100], artist[100];
 
-    // Insert songs at the front of the playlist
-    insertAtFront(&playlist, "Shape of You", "Ed Sheeran");
-    insertAtFront(&playlist, "Blinding Lights", "The Weeknd");
-    insertAtFront(&playlist, "Levitating", "Dua Lipa");
+    while (1) {
+        menu(); // Display the menu
+        scanf("%d", &choice); // Get the user's choice
+        getchar(); // Consume newline character after scanf
 
-    // Display the playlist
-    displaySongs(playlist);
+        switch (choice) {
+            case 1: // Insert a song at the front
+                printf("Enter song title: ");
+                fgets(title, sizeof(title), stdin);
+                title[strcspn(title, "\n")] = '\0'; // Remove the trailing newline
 
-    // Free memory allocated for the playlist
-    freePlaylist(playlist);
+                printf("Enter artist name: ");
+                fgets(artist, sizeof(artist), stdin);
+                artist[strcspn(artist, "\n")] = '\0'; // Remove the trailing newline
+
+                insertAtFront(&playlist, title, artist);
+                break;
+
+            case 2: // Display all songs
+                displaySongs(playlist);
+                break;
+
+            case 3: // Exit the program
+                freePlaylist(playlist); // Clean up the memory
+                printf("Exiting the program...\n");
+                return 0;
+
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
 
     return 0;
 }
